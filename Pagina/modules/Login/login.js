@@ -9,6 +9,7 @@ let users = {
 const loginform = document.getElementById('loginform');
 const inputid = document.getElementById('empleadoid');
 const inputpass = document.getElementById('pass');
+const reccon = document.getElementById("reccon");
 
 loginform.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -21,11 +22,10 @@ loginform.addEventListener('submit', (event) => {
             switch (users.usertype[i]){
                 case "admin":
                     console.log("El Usuario es Admin");
-                    window.location.href = "../inicio_administrador.html"
+                    window.location.href = "../../actors/admin.html"
                     break;
                 case "user":
                     console.log("El Usuario es Usuario");
-                    window.location.href = "../inicio_usuario.html"
                     break;
                 case "envios":
                     console.log("El Usuario es Envios")
@@ -38,4 +38,18 @@ loginform.addEventListener('submit', (event) => {
             break;
         }
     }
+});
+
+reccon.addEventListener('click', (event) => {
+    event.preventDefault();
+    do {
+        ID = prompt(`Recuperar Contraseña \n\nIngrese su ID de Empleado, el administrador le enviará una contraseña nueva`);
+
+        if (ID === null || ID === "") {
+            return;
+        }
+        
+    } while (isNaN(ID));
+
+    alert(`Recuperar Contraseña \n\nTarea Realizada con Éxito, se ha notificado al administrador`);
 });
