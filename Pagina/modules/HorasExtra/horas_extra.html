@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horas Extra</title>
+  <link rel="shortcut icon" href="./recursos/Logo.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca.html">Acerca De</a></li>
+        <li><a href="registro.html">Registrarse</a></li>
+        </ul>
+    </div>
+    <div>
+        <img class="esquina" src="./recursos/Logo.jpeg" alt="Logo" width="120px" style="padding: 5px;">
+    </div>
+    <div class="selector-titulo">
+        Horas Extra
+    </div >
+    <section class="column">
+        <div class="container-select">
+            <label for="empleados">ID de Usuario a calcular:</label>
+            <select id="empleados" class="select-css">
+                <option value="">Selecciona empleado</option>
+                <option value="K051399">K051399</option>
+                <option value="R051795">R051795</option>
+            </select>
+            <div id="empleadoSeleccionado"></div>
+        </div>
+        <div class="custom-datepicker">
+            <label for="start" >Semana:</label>
+            <input type="date" id="start" name="trip-start" value="" min="2024-01-01" max="2024-12-31"  />
+            <input type="date" id="start" name="trip-start" value="" min="2024-01-01" max="2024-12-31" />
+        </div>
+    </section>
+    <div>
+        <table id="horasExtras">
+            <thead>
+                <tr>
+                    <th>Parametro</th>
+                    <th>Lu</th>
+                    <th>Mar</th>
+                    <th>Mie</th>
+                    <th>Jue</th>
+                    <th>Vie</th>
+                    <th>Sab</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cantidad de horas adicionales</td>
+                    <td><input type="number" class="horas"></td>
+                    <td><input type="number" class="horas"></td>
+                    <td><input type="number" class="horas"></td>
+                    <td><input type="number" class="horas"></td>
+                    <td><input type="number" class="horas"></td>
+                    <td><input type="number" class="horas"></td>
+                    
+                </tr>
+                <tr>
+                    <td>Costo por hora adicionales</td>
+                    <td><input type="number" class="costo"></td>
+                    <td><input type="number" class="costo"></td>
+                    <td><input type="number" class="costo"></td>
+                    <td><input type="number" class="costo"></td>
+                    <td><input type="number" class="costo"></td>
+                    <td><input type="number" class="costo"></td>
+                    
+                </tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td class="subtotal"></td>
+                    <td class="subtotal"></td>
+                    <td class="subtotal"></td>
+                    <td class="subtotal"></td>
+                    <td class="subtotal"></td>
+                    <td class="subtotal"></td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+    <div class="column">
+        <button id="btnMenu" class="boton">Menu</button>
+        <div>
+            <p class="sum_sub">Total :$</p>
+        </div>
+    </div>
+
+
+  <script src="horas_extra.js"></script>
+
+
+</body>
+</html>
