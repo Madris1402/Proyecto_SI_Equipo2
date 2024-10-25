@@ -3,19 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gama Bordados y Diseños</title>
+    <title>Gama Diseño Diseño e Impresión</title>
+    <link rel="shortcut icon" href="../../resources/Logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilos.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Iniciar Sesión</h1>
-        <form id="loginform">
-            <label for="empleadoid">ID de Empleado</label>
-            <input type="number" id="empleadoid" placeholder="Ingrese su ID de Empleado" required> <br>
-            <label for="pass">Contraseña</label>
-            <input type="password" id="pass" placeholder="Ingrese su Contraseña"> <br>
-            <button type="submit">Iniciar Sesión</button> <br>
-        </form>
-        <button type="menu">Recuperar Contraseña</button>
+    <div class="center">
+        <div class="center">
+            <img src="../../resources/Logo.jpeg" alt="Logo" width="200px">
+        </div>
+        <div class="container">
+            <div class="center">
+                <h1 class="login">Iniciar Sesión</h1>
+                <form id="loginform">
+                    <table>
+                        <tr>
+                            <td>
+                                <label class="login" for="empleadoid">ID de Empleado</label>
+                            </td>
+                            <td>
+                                <input type="number" id="empleadoid" placeholder="Ingrese su ID" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="login" for="pass">Contraseña</label>
+                            </td>
+                            <td>
+                                <input type="password" id="pass" placeholder="Ingrese su Contraseña">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit">Iniciar Sesión</button>
+                            </td>
+                            <td>
+                                <button type="menu">Recuperar Contraseña</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form><br>
+                
+            </div>
+        </div>
     </div>
 </body>
 <script src="login.js"></script>

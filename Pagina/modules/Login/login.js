@@ -17,18 +17,20 @@ loginform.addEventListener('submit', (event) => {
 
     for (let i = 0; i < users.empleadoid.length; i++) {
         if (users.empleadoid[i] === empleadoid && users.password[i] === pass) {
-            alert("Funcionando");
+            console.log("Funcionando");
             switch (users.usertype[i]){
                 case "admin":
-                    alert("El Usuario es Admin");
+                    console.log("El Usuario es Admin");
+                    window.location.href = "../inicio_administrador.html"
                     break;
                 case "user":
-                    alert("El Usuario es Usuario");
+                    console.log("El Usuario es Usuario");
+                    window.location.href = "../inicio_usuario.html"
                     break;
                 case "envios":
-                    alert("El Usuario es Envios")
+                    console.log("El Usuario es Envios")
                 case "insumos":
-                    alert("El Usuario es Insumos")
+                    console.log("El Usuario es Insumos")
             }
             break;
         } else {
