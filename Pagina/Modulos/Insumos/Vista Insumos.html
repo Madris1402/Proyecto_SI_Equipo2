@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insumos</title>
+    <style>
+        .status-circle {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .green {
+            background-color: green;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .red {
+            background-color: red;
+        }
+        .esquina {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img class="esquina" src="../../Recursos/Logo.jpeg" alt="Logo" width="120px" style="padding: 5px;">
+    </div>
+
+    <h1>Insumos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID Insumo</th>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>50</td>
+                <td>Vinil para estampado</td>
+                <td><span class="status-circle green"></span> Disponible</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>10</td>
+                <td>Bordado balón</td>
+                <td><span class="status-circle yellow"></span> Poca disponibilidad</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>0</td>
+                <td>Bordado nombre</td>
+                <td><span class="status-circle red"></span> No disponible</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    
+    <button>Inicio</button>
+    <button>Solicitar Insumo</button>
+</body>
+</html>
