@@ -51,6 +51,4 @@ totalDisplay.textContent = `Total: $${totalSum}`;
 
 const btnMenu = document.getElementById('btnMenu');
 
-btnMenu.addEventListener('click', () => {
-    window.location.href = ''; // Reemplaza con la URL de tu menú
-});
+;

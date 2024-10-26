@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiempos Entrega</title>
+  <link rel="shortcut icon" href="../../resources/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca.html">Acerca De</a></li>
+        <li><a href="registro.html">Registrarse</a></li>
+        </ul>
+    </div>
+    <div>
+        <img class="esquina" src="../../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
+    </div>
+    <div class="selector-titulo">
+        Tiempos Entrega 
+    </div >
+    <section class="column">
+        <div class="container-select">
+            <label for="empleados">ID de Cotizacion:</label>
+            <input type="text" name="id_cotizacion" id="id_cotizacion">
+            <div></div>
+        </div>
+        
+    </section>
+    <div>
+        <table id="horasExtras">
+            <thead>
+                <tr>
+                    <th>Tecnica</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>
+                    <th>Produccion Aproximada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><select name="tecnica" id="tecnica">
+                        <option value="">Selecciona tecnica</option>
+                        <option value="">Bordado</option>
+                        <option value="">Serigrafia</option>
+                        <option value="">Transfer</option>
+                        <option value="">Vinyl</option>
+                        <option value="">Grabado</option>
+                    </select></td>
+                    <td><input type="text" class="description"></td>  
+                    <td><input type="number" class="horas"></td>
+                    <td><input type="number" class="producc">hrs</td>
+                    
+                </tr>
+                
+                </tbody>
+        </table>
+    </div>
+    <section class="column" >
+        <div class="container-select">
+            <a href="cotizador"><button class="boton">Regresar</button></a>
+        </div>
+        <div>
+            <a href="finalizar"><button class="boton">Finalizar</button></a>
+        </div class="container-select">
+    </section>
+
+  <script src="horas_extra.js"></script>
+
+
+</body>
+</html>

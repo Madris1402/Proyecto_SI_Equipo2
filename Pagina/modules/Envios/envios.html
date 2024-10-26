@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumidores</title>
+    <title>Envíos</title>
     <style>
         table {
             width: 100%;
@@ -20,30 +20,28 @@
     </style>
 </head>
 <body>
-    <h1>Registro de Consumidores</h1>
+    <h1>Registro de Envíos</h1>
     <form id="shippingForm">
-        <input type="text" id="name" placeholder="Nombre" required>
-        <input type="text" id="contact" placeholder="Contacto" required>
-        <input type="text" id="direc" placeholder="Dirección" required>
-        <input type="text" id="rfc" placeholder="RFC" required>
-        <button type="submit">Agregar Consumidor</button>
+        <input type="text" id="orderId" placeholder="ID del Pedido" required>
+        <input type="text" id="shippingMethod" placeholder="Método de Envío" required>
+        <input type="text" id="orderStatus" placeholder="Estado del Pedido" required>
+        <button type="submit">Agregar Envío</button>
     </form>
 
     <table id="shippingTable">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Contacto</th>
-                <th>Dirección</th>
-                <th>RFC</th>
+                <th>ID del Pedido</th>
+                <th>Método de Envío</th>
+                <th>Estado del Pedido</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Los consumidores se agregarán aquí -->
+            <!-- Los envíos se agregarán aquí -->
         </tbody>
     </table>
 
-    <script src="consumidores.js"></script>
+    <script src="envios.js"></script>
 </body>
 </html>

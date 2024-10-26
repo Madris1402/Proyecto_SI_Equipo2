@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumidores</title>
+    <title>Insumos</title>
     <style>
         table {
             width: 100%;
@@ -20,30 +20,30 @@
     </style>
 </head>
 <body>
-    <h1>Registro de Consumidores</h1>
+    <h1>Registro de Insumos</h1>
     <form id="shippingForm">
-        <input type="text" id="name" placeholder="Nombre" required>
-        <input type="text" id="contact" placeholder="Contacto" required>
-        <input type="text" id="direc" placeholder="Dirección" required>
-        <input type="text" id="rfc" placeholder="RFC" required>
-        <button type="submit">Agregar Consumidor</button>
+        <input type="text" id="insid" placeholder="ID del Insumo" required>
+        <input type="text" id="cantidad" placeholder="Cantidad" required>
+        <input type="text" id="desc" placeholder="Descripcion" required>
+        <input type="text" id="disp" placeholder="Disponibilidad" required>
+        <button type="submit">Agregar Insumo</button>
     </form>
 
     <table id="shippingTable">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Contacto</th>
-                <th>Dirección</th>
-                <th>RFC</th>
+                <th>ID del Insumo</th>
+                <th>Cantidad</th>
+                <th>Descripcion</th>
+                <th>Disponibilidad</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Los consumidores se agregarán aquí -->
+            <!-- Los insumos se agregarán aquí -->
         </tbody>
     </table>
 
-    <script src="consumidores.js"></script>
+    <script src="insumos.js"></script>
 </body>
 </html>
