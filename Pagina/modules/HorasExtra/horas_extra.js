@@ -4,8 +4,8 @@ const empleadoSeleccionadoDiv = document.getElementById('empleadoSeleccionado');
 
 // Obtener los datos de los empleados 
 const empleados = [
-    { id: 'K051399', nombre: 'Karla Gutierrez', puesto: 'Bordadora' },
-    { id: 'R051795', nombre: 'Agustin Perez', puesto: 'Diseñador' }
+    { id: 'K051399', nombre: 'Karla Gutierrez', puesto: 'Bordadora' , contacto: '55-XXXX-XXXX' },
+    { id: 'R051795', nombre: 'Agustin Perez', puesto: 'Diseñador' , contacto: '55-XXXX-XXXX' }
 ];
 
 // Agregar un evento al select de empleados
@@ -14,41 +14,43 @@ empleadosSelect.addEventListener('change', () => {
     const empleado = empleados.find(e => e.id === empleadoId);
 
     if (empleado) {
-        empleadoSeleccionadoDiv.textContent = `${empleado.nombre} - ${empleado.puesto}`;
+        empleadoSeleccionadoDiv.innerHTML = `<p>${empleado.nombre} - ${empleado.puesto}</p><p>${empleado.contacto}</p>`; 
     } else {
-        empleadoSeleccionadoDiv.textContent = "Empleado no encontrado";
+        empleadoSeleccionadoDiv.textContent = "";
     }
 });
 
 // Obtener todas las celdas donde se ingresarán las horas y los costos
-const horasInputs = document.querySelectorAll('.horas');
-const costoInputs = document.querySelectorAll('.costo');
-const subtotalCells = document.querySelectorAll('.subtotal');
-const totalDisplay = document.querySelector('.sum_sub');
-let totalSum = 0;
+const costoHoraAdicionalInput = document.getElementById('costoxhoraA');
+const horasAdicionalesInputs = document.querySelectorAll('.horas');
+const subtotales = document.querySelectorAll('.subtotal');
+const totalDiv = document.querySelector('.total');
 
-// Iterar sobre cada día y calcular el subtotal
-horasInputs.forEach((horasInput, index) => {
-    horasInput.addEventListener('input', () => {
-        const costo = costoInputs[index].value;
-        const subtotal = horasInput.value * costo;
-        subtotalCells[index].textContent = subtotal;
-        totalSum += subtotal;
-    });
-});
+costoHoraAdicionalInput.addEventListener('input', () => {
+    const costoHoraAdicional = parseFloat(costoHoraAdicionalInput.value);
 
-costoInputs.forEach((costoInput, index) => {
-    costoInput.addEventListener('input', () => {
-        const horas = horasInputs[index].value;
-        const subtotal = horas * costoInput.value;
-        subtotalCells[index].textContent = subtotal;
-        totalSum += subtotal;
+    horasAdicionalesInputs.forEach((input, index) => {
+        const horasAdicionales = parseFloat(input.value);
+        const subtotal = horasAdicionales * costoHoraAdicional;
+        subtotales[index].textContent = subtotal.toFixed(2); // Format to 2 decimal places
     });
 });
 
 
-totalDisplay.textContent = `Total: $${totalSum}`;
 
-const btnMenu = document.getElementById('btnMenu');
+function calculateTotal() {
+  let total = 0;
+  subtotales.forEach(subtotal => {
+    const subtotalValue = parseFloat(subtotal.textContent.replace('$', ''));
+    if (!isNaN(subtotalValue)){
+    total += subtotalValue;
+    }
+    });
+    totalDiv.textContent = `TOTAL: $${total.toFixed(2)}`;
+}
 
-;
+document.addEventListener('DOMContentLoaded', calculateTotal);
+costoHoraAdicionalInput.addEventListener('input', calculateTotal);
+horasAdicionalesInputs.forEach(input => {
+  input.addEventListener('input', calculateTotal);
+});
