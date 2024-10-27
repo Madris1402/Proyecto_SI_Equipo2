@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cotizador</title>
+    <link rel="shortcut icon" href="/recursos/Logo.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca.html">Acerca De</a></li>
+        <li><a href="registro.html">Registrarse</a></li>
+      </ul>
+    </div>
+    <div>
+      <img class="esquina" src="/recursos/Logo.jpeg" alt="Logo" width="120px" />
+    </div>
+    <h1>Cotizador</h1>
+    <div class="entradas">
+      <label for="tecnica">Técnica:</label>
+      <select name="tecnica">
+        <option value="Selecciona opcion">Selecciona una opción</option>
+        <option value="opcion1">Opción 1</option>
+        <option value="opcion2">Opción 2</option>
+        <option value="opción3">Opción 3</option>
+      </select>
+    </div>
+    <br />
+    <br />
+    <div class="entradas">
+      <label for="tecnica">Producto:</label>
+      <select name="producto">
+        <option value="Selecciona opcion">Selecciona una opción</option>
+        <option value="producto1">Producto 1</option>
+        <option value="producto2">Producto 2</option>
+        <option value="producto3">Producto 3</option>
+      </select>
+    </div>
+    <br /><br />
+    <div class="cantidades">
+      <label for="cantidad">Cantidad:</label>
+
+      <input type="number" name="cantidad" min="1" max="100" />
+    </div>
+    <br /><br />
+    <div class="entradas">
+      <label for="consumidor">Consumidor:</label>
+      <select name="consumidor">
+        <option value="Selecciona opcion">Selecciona una opción</option>
+        <option value="consumidor1">Consumidor 1</option>
+        <option value="consumidor2">Consumidor 2</option>
+        <option value="consumidor3">Consumidor 3</option>
+      </select>
+    </div>
+    <br /><br />
+    <div class="">
+      <p>Contacto: <textarea name="contacto"></textarea></p>
+      <br /><br />
+      <label for="start">Vigencia:</label>
+      <input
+        type="date"
+        name="vigencia"
+        value="24-10-2024"
+        min="01-01-2024"
+        max="31-12-2024"
+      />
+    </div>
+    <br /><br />
+    <button>
+      <span>Cancelar</span>
+    </button>
+    <button>
+      <span>Continuar</span>
+    </button>
+  </body>
+</html>
