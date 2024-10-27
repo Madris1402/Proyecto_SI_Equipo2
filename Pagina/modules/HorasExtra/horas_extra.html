@@ -13,38 +13,42 @@
     <div>
         <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="acerca.html">Acerca De</a></li>
+        <li><a href="acerca_he.html">Acerca De</a></li>
         <li><a href="registro.html">Registrarse</a></li>
         </ul>
     </div>
     <div>
         <img class="esquina" src="../../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
     </div>
-    <div class="selector-titulo">
+    <div class="selec_h1">
         Horas Extra
     </div >
     <section class="column">
         <div class="container-select">
-            <label for="empleados">ID de Usuario a calcular:</label>
-            <select id="empleados" class="select-css">
-                <option value="">Selecciona empleado</option>
-                <option value="K051399">K051399</option>
-                <option value="R051795">R051795</option>
-            </select>
-            <div id="empleadoSeleccionado"></div>
+            <label for="empleados">ID de Usuario:</label>
+                <select id="empleados" class="select-css">
+                    <option value="">Selecciona usuario</option>
+                    <option value="K051399">K051399</option>
+                    <option value="R051795">R051795</option>
+                </select> 
         </div>
+
+        <div id="empleadoSeleccionado"></div>
+
         <div class="custom-datepicker">
-            <label for="start" >Semana:</label>
-            <input type="date" id="start" name="trip-start" value="" min="2024-01-01" max="2024-12-31"  />
-            <input type="date" id="start" name="trip-start" value="" min="2024-01-01" max="2024-12-31" />
-        </div>
+            <!-- <div class="date"> -->
+                <label for="start" >Semana:</label>
+                    <input type="date" id="start" name="trip-start" value="" min="2024-01-01" max="2024-12-31" />
+                    <input type="date" id="start" name="trip-start" value="" min="2024-01-01" max="2024-12-31" />
+            <!-- </div> -->
+        </div> 
     </section>
     <div>
         <table id="horasExtras">
             <thead>
                 <tr>
                     <th>Parametro</th>
-                    <th>Lu</th>
+                    <th >Lu</th>
                     <th>Mar</th>
                     <th>Mie</th>
                     <th>Jue</th>
@@ -64,34 +68,29 @@
                     
                 </tr>
                 <tr>
-                    <td>Costo por hora adicionales</td>
-                    <td><input type="number" class="costo"></td>
-                    <td><input type="number" class="costo"></td>
-                    <td><input type="number" class="costo"></td>
-                    <td><input type="number" class="costo"></td>
-                    <td><input type="number" class="costo"></td>
-                    <td><input type="number" class="costo"></td>
-                    
-                </tr>
-                <tr>
                     <td>Subtotal</td>
-                    <td class="subtotal"></td>
-                    <td class="subtotal"></td>
-                    <td class="subtotal"></td>
-                    <td class="subtotal"></td>
-                    <td class="subtotal"></td>
-                    <td class="subtotal"></td>
+                    <td class="subtotal">$</td>
+                    <td class="subtotal">$</td>
+                    <td class="subtotal">$</td>
+                    <td class="subtotal">$</td>
+                    <td class="subtotal">$</td>
+                    <td class="subtotal">$</td>
                 </tr>
                 </tbody>
         </table>
-    </div>
-    <div class="column">
-        <a href="../../actors/admin.html"><button id="btnMenu" class="boton">Menu</button></a>
-        <!-- <div>
-            <p class="sum_sub">Total :$</p>
-        </div> -->
-    </div>
 
+        
+    </div>
+    <div class="container-cost">
+        <label for="costoxhoraA" class="costo">Costo por Hora Adicional: $ </label>
+            <input type="number" name="costoxhoraA" id="costoxhoraA">
+    </div>
+    <section class="column">
+        <div class="boton">
+            <a href="../../actors/admin.html"><button id="btnMenu" >Menu</button></a>
+        </div>
+        <div class="total"></div>
+    </section>
 
   <script src="horas_extra.js"></script>
 
