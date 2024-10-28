@@ -32,11 +32,9 @@ costoHoraAdicionalInput.addEventListener('input', () => {
     horasAdicionalesInputs.forEach((input, index) => {
         const horasAdicionales = parseFloat(input.value);
         const subtotal = horasAdicionales * costoHoraAdicional;
-        subtotales[index].textContent = subtotal.toFixed(2); // Format to 2 decimal places
+        subtotales[index].textContent = `$${isNaN(subtotal) ? 0: subtotal.toFixed(2)}`;
     });
 });
-
-
 
 function calculateTotal() {
   let total = 0;
