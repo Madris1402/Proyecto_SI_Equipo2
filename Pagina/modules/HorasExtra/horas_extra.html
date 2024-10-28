@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horas Extra</title>
   <link rel="shortcut icon" href="../../resources/Logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="../../resources/estilos.css">
 </head>
 
 <body>
@@ -53,11 +53,11 @@
         </div> 
     </section>
     <div>
-        <table id="horasExtras">
+        <table class="tablero" id="horasExtras">
             <thead>
                 <tr>
                     <th>Parametro</th>
-                    <th >Lu</th>
+                    <th>Lu</th>
                     <th>Mar</th>
                     <th>Mie</th>
                     <th>Jue</th>
@@ -101,8 +101,15 @@
         <div class="total"></div>
     </section>
 
-  <script src="horas_extra.js"></script>
-
-
 </body>
+<script>
+  function openNav() {
+      document.getElementById("mySidebar").classList.add("open");
+  }
+
+function closeNav() {
+      document.getElementById("mySidebar").classList.remove("open");
+  }
+</script>
+<script src="horas_extra.js"></script>
 </html>

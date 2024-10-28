@@ -52,11 +52,3 @@ costoHoraAdicionalInput.addEventListener('input', calculateTotal);
 horasAdicionalesInputs.forEach(input => {
   input.addEventListener('input', calculateTotal);
 });
-
-function openNav() {
-    document.getElementById("mySidebar").classList.add("open");
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidebar").classList.remove("open");
-}

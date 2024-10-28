@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiempos Entrega</title>
-  <link rel="shortcut icon" href="../../resources/Logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Diseño Diseño e Impresión</title>
+    <link rel="shortcut icon" href="../../resources/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../resources/estilos.css">
 </head>
-
 <body>
     <div>
         <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="acerca.html">Acerca De</a></li>
-        <li><a href="registro.html">Registrarse</a></li>
+        <li><a href="#" onclick="openNav()">&#9776;</a></li>
         </ul>
+    </div>
+  
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="../Consumidores/consumidores.html">Consumidores</a>
+      <a href="../Cotizador/cotizador.html">Cotizador</a>
+      <a href="../Envios/envios.html">Envios</a>
+      <a href="../Historial de Pedidos/historial.html">Historial de Pedidos</a>
+      <a href="../Insumos/insumos.html">Insumos</a>
+      <a href="../Pedidos Activos/Activos.html">Pedidos Activos</a>
+      <a href="../TiemposEntrega/tiempos_entrega.html">Tiempos Entrega</a>
     </div>
     <div>
         <img class="esquina" src="../../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
     </div>
-    <div class="selector-titulo">
-        Tiempos Entrega 
-    </div >
+    <div>
+        <h1>Tiempos Entrega </h1>
+    </div>
+    <div class="centrar">
     <section class="column">
         <div class="container-select">
             <label for="empleados">ID de Cotizacion:</label>
@@ -32,7 +40,7 @@
         
     </section>
     <div>
-        <table id="horasExtras">
+        <table class="tablero" id="horasExtras">
             <thead>
                 <tr>
                     <th>Tecnica</th>
@@ -56,21 +64,26 @@
                     <td><input type="number" class="producc">hrs</td>
                     
                 </tr>
-                
                 </tbody>
         </table>
     </div>
     <section class="column" >
         <div class="container-select">
-            <a href="cotizador"><button class="boton">Regresar</button></a>
+            <a href="../../modules/Cotizador/cotizador.html"><button class="boton">Regresar</button></a>
         </div>
         <div>
-            <a href="finalizar"><button class="boton">Finalizar</button></a>
+            <a href="../Pedidos Activos/Activos.html"><button class="boton">Finalizar</button></a>
         </div class="container-select">
     </section>
-
-  <script src="horas_extra.js"></script>
-
-
 </body>
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").classList.add("open");
+    }
+  
+    function closeNav() {
+            document.getElementById("mySidebar").classList.remove("open");
+        }
+  </script>
+  <script src="horas_extra.js"></script>
 </html>

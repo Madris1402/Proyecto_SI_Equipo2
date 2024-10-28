@@ -1,49 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insumos</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <title>Gama Diseño Diseño e Impresión</title>
+    <link rel="shortcut icon" href="../../resources/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../resources/estilos.css">
 </head>
 <body>
-    <h1>Registro de Insumos</h1>
-    <form id="shippingForm">
-        <input type="text" id="insid" placeholder="ID del Insumo" required>
-        <input type="text" id="cantidad" placeholder="Cantidad" required>
-        <input type="text" id="desc" placeholder="Descripcion" required>
-        <input type="text" id="disp" placeholder="Disponibilidad" required>
-        <button type="submit">Agregar Insumo</button>
-    </form>
+    <div>
+        <ul>
+        <li><a href="#" onclick="openNav()">&#9776;</a></li>
+        </ul>
+    </div>
+  
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="../Consumidores/consumidores.html">Consumidores</a>
+      <a href="../Cotizador/cotizador.html">Cotizador</a>
+      <a href="../Envios/envios.html">Envios</a>
+      <a href="../Historial de Pedidos/historial.html">Historial de Pedidos</a>
+      <a href="../Insumos/insumos.html">Insumos</a>
+      <a href="../Pedidos Activos/Activos.html">Pedidos Activos</a>
+      <a href="../TiemposEntrega/tiempos_entrega.html">Tiempos Entrega</a>
+    </div>
+    <div>
+        <img class="esquina" src="../../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
+    </div>
+    <div>
+        <h1>Insumos</h1>
+    </div>
+    <div class="centrar">
+        <table class="tablero">
+            <thead>
+                <tr>
+                    <th>ID Insumo</th>
+                    <th>Cantidad</th>
+                    <th>Descripción</th>
+                    <th>Estatus</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-insumos">
+            </tbody>
+        </table>
 
-    <table id="shippingTable">
-        <thead>
-            <tr>
-                <th>ID del Insumo</th>
-                <th>Cantidad</th>
-                <th>Descripcion</th>
-                <th>Disponibilidad</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Los insumos se agregarán aquí -->
-        </tbody>
-    </table>
-
-    <script src="insumos.js"></script>
+        <br>
+        
+        <button onclick="window.location.href = 'principalNuevos.html';">Solicitar Insumo</button>
+        <a href="../../actors/admin.html"><button>Inicio</button></a>
+    </div>
 </body>
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").classList.add("open");
+    }
+  
+    function closeNav() {
+            document.getElementById("mySidebar").classList.remove("open");
+        }
+  </script>
+  <script src="insumos.js"></script>
 </html>
