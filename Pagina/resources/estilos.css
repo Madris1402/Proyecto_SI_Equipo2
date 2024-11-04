@@ -13,13 +13,7 @@ body {
   float: right;
 }
 
-.centrar{
-  display: flex;
-  margin: auto;
-  align-items: center;
-  padding: 10px;
-  margin-top: 2em;
-}
+
 /* Titulo */
 .selec_h1 {
   padding-top: 1em;
@@ -296,6 +290,14 @@ td, th{
   border: 5px solid #62030c;
   text-align: justify;
   padding: 5%;
+}
+
+.centrar_login{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  padding: 10px;
+  margin-top: 2em;
 }
 
 #reccon{
