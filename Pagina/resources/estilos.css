@@ -14,9 +14,11 @@ body {
 }
 
 .centrar{
+  display: flex;
   margin: auto;
-  width: 50%;
+  align-items: center;
   padding: 10px;
+  margin-top: 2em;
 }
 /* Titulo */
 .selec_h1 {
@@ -287,12 +289,30 @@ td, th{
 /* Login */
 .container {
   width: 500px;
+  height: 350px;
   color: #14121d;
   background-color: #cdcdcd;
   border-radius: 10px;
   border: 5px solid #62030c;
   text-align: justify;
   padding: 5%;
+}
+
+#reccon{
+  font-size: small;
+  margin-left: 7em;
+  color: #14121d;
+}
+
+#reccon:visited{
+  color: #62030c;
+}
+
+#is{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -4.5em;
 }
 
 /* Horas Extra */
