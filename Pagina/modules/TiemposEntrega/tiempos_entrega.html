@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../../resources/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../../resources/estilos.css">
 </head>
-<body>
+<body onload="generarNuevoId()">
     <div>
         <ul>
         <li><a href="#" onclick="openNav()">&#9776;</a></li>
@@ -34,12 +34,24 @@
         <h1>Tiempos Entrega </h1>
     </div>
 
-    <div class="centrar">
+    <div>
         <section class="column">
             <div class="container-select">
-                <label for="empleados">ID de Cotizacion:</label>
-                <input type="text" name="id_cotizacion" id="id_cotizacion">
-                <div></div>
+                <p>ID de Cotizacion: <span id="idCotizacion"></span></p>
+            </div>
+            <div class="container-select">
+                <label for="consumidor">Consumidor:</label>
+                <select name="consumidor" id="consumidor">
+                    <option value="Selecciona consumidor">Selecciona una opción</option>
+                    <option value="consumidor1">Consumidor 1</option>
+                    <option value="consumidor2">Consumidor 2</option>
+                    <option value="consumidor3">Consumidor 3</option>
+                </select>
+            </div>
+    
+            <div class="container-select">
+                <label for="contacto">Contacto:</label>
+                <input type="text" name="contacto" id="contacto" placeholder="Ingrese contacto">
             </div>
         </section>
 
@@ -73,20 +85,7 @@
             </table>
         </div>
 
-        <div class="container-select">
-            <label for="consumidor">Consumidor:</label>
-            <select name="consumidor" id="consumidor">
-                <option value="Selecciona consumidor">Selecciona una opción</option>
-                <option value="consumidor1">Consumidor 1</option>
-                <option value="consumidor2">Consumidor 2</option>
-                <option value="consumidor3">Consumidor 3</option>
-            </select>
-        </div>
-
-        <div class="container-select">
-            <label for="contacto">Contacto:</label>
-            <input type="text" name="contacto" id="contacto" placeholder="Ingrese contacto">
-        </div>
+        
         
         <section class="column">
             <div class="container-select">
@@ -98,41 +97,7 @@
         </section>
     </div>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidebar").classList.add("open");
-        }
-
-        function closeNav() {
-            document.getElementById("mySidebar").classList.remove("open");
-        }
-
-        function finalizarPedido() {
-            // Obtener datos de cotizador de localStorage
-            const cotizadorData = JSON.parse(localStorage.getItem('cotizadorData'));
-            const consumidor = document.getElementById('consumidor').value;
-            const contacto = document.getElementById('contacto').value;
-
-            const pedidoData = {
-                id_cotizacion: document.getElementById('id_cotizacion').value,
-                tecnica: cotizadorData.tecnica,
-                producto: cotizadorData.producto,
-                cantidad: cotizadorData.cantidad,
-                fecha_requerida: cotizadorData.fecha_requerida,
-                costo: cotizadorData.costo,
-                consumidor: consumidor,
-                contacto: contacto
-            };
-
-            // Guardar datos en localStorage
-            let pedidosActivos = JSON.parse(localStorage.getItem('pedidosActivos')) || [];
-            pedidosActivos.push(pedidoData);
-            localStorage.setItem('pedidosActivos', JSON.stringify(pedidosActivos));
-
-            // Redirigir a pedidos activos
-            window.location.href = '../Pedidos Activos/Activos.html';
-        }
-    </script>
+    <script src="tiempos_entrega.js"></script>
 </body>
 </html>
 
