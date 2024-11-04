@@ -23,6 +23,7 @@
       <a href="../Insumos/insumos.html">Insumos</a>
       <a href="../Pedidos Activos/Activos.html">Pedidos Activos</a>
       <a href="../TiemposEntrega/tiempos_entrega.html">Tiempos Entrega</a>
+      <a href="../HorasExtra/horas_extra.html">Horas Extra</a>
     </div>
     <div>
         <img class="esquina" src="../../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
@@ -30,25 +31,24 @@
     <div>
         <h1>Insumos</h1>
     </div>
-    <div class="centrar">
-        <table class="tablero">
-            <thead>
-                <tr>
-                    <th>ID Insumo</th>
-                    <th>Cantidad</th>
-                    <th>Descripción</th>
-                    <th>Estatus</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="tabla-insumos">
-            </tbody>
-        </table>
+    <table class="tablero" border="1px">
+        <thead>
+            <tr>
+                <th>ID Insumo</th>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+                <th>Estatus</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-insumos">
+        </tbody>
+    </table>
 
-        <br>
-        
-        <button onclick="window.location.href = 'principalNuevos.html';">Solicitar Insumo</button>
-        <a href="../../actors/admin.html"><button>Inicio</button></a>
+    <br>
+    
+    <button onclick="window.location.href = 'principalNuevos.html';">Agregar Insumo</button>
+    <button>Inicio</button>
     </div>
 </body>
 <script>

@@ -10,7 +10,7 @@
 <body>
     <div>
         <ul>
-        <li><a href="#" onclick="openNav()">&#9776;</a></li>
+            <li><a href="#" onclick="openNav()">&#9776;</a></li>
         </ul>
     </div>
   
@@ -23,6 +23,7 @@
       <a href="../Insumos/insumos.html">Insumos</a>
       <a href="../Pedidos Activos/Activos.html">Pedidos Activos</a>
       <a href="../TiemposEntrega/tiempos_entrega.html">Tiempos Entrega</a>
+      <a href="../HorasExtra/horas_extra.html">Horas Extra</a>
     </div>
     <div>
         <img class="esquina" src="../../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
@@ -41,21 +42,44 @@
                 </tr>
             </thead>
             <tbody id="historialTable">
-                <!-- Contenido generado por JavaScript -->
             </tbody>
         </table>
     </div>
-    
-    
-    
-</body>
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").classList.add("open");
-    }
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").classList.add("open");
+        }
   
-    function closeNav() {
+        function closeNav() {
             document.getElementById("mySidebar").classList.remove("open");
         }
-  </script>
+
+        // Cragar historial
+        function loadHistorial() {
+            const pedidoFinalizado = JSON.parse(localStorage.getItem('pedidoFinalizado'));
+            const tableBody = document.getElementById('historialTable');
+
+            if (pedidoFinalizado) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${pedidoFinalizado.id}</td>
+                    <td>${new Date().toLocaleDateString()}</td> <!-- Fecha de entrega actual -->
+                    <td>${pedidoFinalizado.descripcion}</td>
+                    <td>${pedidoFinalizado.consumidor}</td>
+                `;
+                tableBody.appendChild(row);
+                // Eliminar la ila
+                localStorage.removeItem('pedidoFinalizado');
+            } else {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td colspan="4">No hay pedidos finalizados.</td>`;
+                tableBody.appendChild(row);
+            }
+        }
+
+        // Cargar historial
+        window.onload = loadHistorial;
+    </script>
+</body>
 </html>

@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horas Extra</title>
   <link rel="shortcut icon" href="../../resources/Logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="../../resources/estilos.css">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-   <div>
+    <div>
         <ul>
         <li><a href="#" onclick="openNav()">&#9776;</a></li>
         </ul>
@@ -25,6 +25,7 @@
       <a href="../Insumos/insumos.html">Insumos</a>
       <a href="../Pedidos Activos/Activos.html">Pedidos Activos</a>
       <a href="../TiemposEntrega/tiempos_entrega.html">Tiempos Entrega</a>
+      <a href="../HorasExtra/horas_extra.html">Horas Extra</a>
     </div>
     <div>
         <img class="esquina" src="../../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
@@ -53,11 +54,11 @@
         </div> 
     </section>
     <div>
-        <table class="tablero" id="horasExtras">
+        <table id="horasExtras">
             <thead>
                 <tr>
                     <th>Parametro</th>
-                    <th>Lu</th>
+                    <th >Lu</th>
                     <th>Mar</th>
                     <th>Mie</th>
                     <th>Jue</th>
@@ -101,15 +102,8 @@
         <div class="total"></div>
     </section>
 
-</body>
-<script>
-  function openNav() {
-      document.getElementById("mySidebar").classList.add("open");
-  }
+  <script src="horas_extra.js"></script>
 
-function closeNav() {
-      document.getElementById("mySidebar").classList.remove("open");
-  }
-</script>
-<script src="horas_extra.js"></script>
+
+</body>
 </html>

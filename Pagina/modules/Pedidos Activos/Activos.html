@@ -13,7 +13,7 @@
         <li><a href="#" onclick="openNav()">&#9776;</a></li>
         </ul>
     </div>
-  
+
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="../Consumidores/consumidores.html">Consumidores</a>
@@ -23,10 +23,13 @@
       <a href="../Insumos/insumos.html">Insumos</a>
       <a href="../Pedidos Activos/Activos.html">Pedidos Activos</a>
       <a href="../TiemposEntrega/tiempos_entrega.html">Tiempos Entrega</a>
+      <a href="../HorasExtra/horas_extra.html">Horas Extra</a>
     </div>
+
     <div>
         <img class="esquina" src="../../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
     </div>
+
     <div>
         <h1>Pedidos Activos</h1>
     </div>
@@ -38,22 +41,75 @@
                     <th>Días para alerta</th>
                     <th>Descripción</th>
                     <th>Consumidor</th>
+                    <th>Contacto</th>
+                    <th>Acciones</th> 
                 </tr>
             </thead>
             <tbody id="activosTable">
-                <!-- Contenido generado por JavaScript -->
+                
             </tbody>
         </table>
     </div>
-</body>
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").classList.add("open");
-    }
-  
-    function closeNav() {
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").classList.add("open");
+        }
+
+        function closeNav() {
             document.getElementById("mySidebar").classList.remove("open");
         }
-  </script>
-  <script src="activos.js"></script>
+
+        function loadPedidosActivos() {
+            const pedidosActivos = JSON.parse(localStorage.getItem('pedidosActivos')) || [];
+            const tableBody = document.getElementById('activosTable');
+
+            pedidosActivos.forEach(pedido => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${pedido.id_cotizacion}</td>
+                    <td>${pedido.fecha_requerida}</td>
+                    <td>${pedido.producto}</td>
+                    <td>${pedido.consumidor}</td>
+                    <td>${pedido.contacto}</td>
+                    <td><button onclick="finalizarPedido('${pedido.id_cotizacion}')">Finalizar</button></td> <!-- Botón para finalizar -->
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        
+        // Cargar pedidos activos 
+        window.onload = loadPedidosActivos;
+
+        function finalizarPedido(id) {
+        // Obtener los pedidos activos
+        let pedidosActivos = JSON.parse(localStorage.getItem('pedidosActivos')) || [];
+    
+        const pedidoFinalizado = pedidosActivos.find(pedido => pedido.id_cotizacion === id);
+
+        // Eliminar el pedido 
+        pedidosActivos = pedidosActivos.filter(pedido => pedido.id_cotizacion !== id);
+        localStorage.setItem('pedidosActivos', JSON.stringify(pedidosActivos));
+
+        // Guardar el pedido finalizado en localStorage
+        localStorage.setItem('pedidoFinalizado', JSON.stringify(pedidoFinalizado));
+
+        // Eliminar la fila de la tabla
+        const tableBody = document.getElementById('activosTable');
+        const row = Array.from(tableBody.rows).find(r => r.cells[0].innerText === id);
+        if (row) {
+        tableBody.removeChild(row);
+        }
+
+        // Redirigir a la página de historial
+        window.location.href = "../Historial de Pedidos/historial.html"; 
+        }
+
+
+    </script>
+</body>
 </html>
+
+
+
