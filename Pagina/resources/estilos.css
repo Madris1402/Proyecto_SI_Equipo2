@@ -26,6 +26,11 @@ body {
   padding: 10px;
 }
 
+textarea{
+  width: 48em;
+  height: 3em;
+  font-size: large;
+}
 
 /* Titulo */
 .selec_h1 {
@@ -48,6 +53,7 @@ ul {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 li {
   float: left;
@@ -62,6 +68,12 @@ li a {
 li a:hover {
   background-color: #62030c;
 }
+.user{
+  margin: auto;
+  height: 50%;
+  margin-left: 0;
+}
+
 /* Logo */
 .esquina {
   float: right;
