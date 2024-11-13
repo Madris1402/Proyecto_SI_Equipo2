@@ -11,14 +11,22 @@
     <div>
         <ul>
         <li><a href="#" onclick="openNav()">&#9776;</a></li>
-        <a href="../../actors/admin.html"><img src="../resources/MENU.png" alt="Menu" width="50px" style="padding: 5px"></a>
+        <a href="./users.html"><img src="../resources/MENU.png" alt="Menu" width="50px" style="padding: 5px"></a>
         <p class="user">Usuario</p>
         </ul>
+    </div>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="../Consumidores/consumidores.html">Consumidores</a>
+      <a href="../Cotizador/cotizador.html">Cotizador</a>
+      <a href="../Historial de Pedidos/historial.html">Historial de Pedidos</a>
+      <a href="../Insumos/insumos.html">Insumos</a>
+      <a href="../Pedidos Activos/Activos.html">Pedidos Activos</a>
     </div>
     <div>
         <img class="esquina" src="../resources/Logo.png" alt="Logo" width="120px" style="padding: 5px;">
     </div>
-    <div class="centrar">
+    <div>
         <table class="menu">
             <tr>
                 <td class="tabla_titulos">
@@ -85,4 +93,13 @@
         </table>
     </div>
 </body>
+<script>
+  function openNav() {
+      document.getElementById("mySidebar").classList.add("open");
+  }
+
+  function closeNav() {
+          document.getElementById("mySidebar").classList.remove("open");
+      }
+</script>
 </html>
