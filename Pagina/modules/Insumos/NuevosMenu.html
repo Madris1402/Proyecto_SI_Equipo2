@@ -33,7 +33,7 @@
 
     <script>
         function cancelar() {
-            window.location.href = 'principalInsumos.html';
+            window.location.href = 'InsumosMenu.html';
         }
 
         function actualizarInsumo() {
@@ -42,7 +42,7 @@
             const descripcion = document.getElementById('descripcion').value;
 
             if (nombre && cantidad && descripcion) {
-                window.location.href = `principalInsumos.html?nombre=${encodeURIComponent(nombre)}&cantidad=${encodeURIComponent(cantidad)}&descripcion=${encodeURIComponent(descripcion)}`;
+                window.location.href = `InsumosMenu.html?nombre=${encodeURIComponent(nombre)}&cantidad=${encodeURIComponent(cantidad)}&descripcion=${encodeURIComponent(descripcion)}`;
             } else {
                 alert("Por favor, complete todos los campos.");
             }

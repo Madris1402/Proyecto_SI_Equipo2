@@ -1,4 +1,5 @@
-// Obtener datos de cotizador de localStorage
+function finalizarPedido() {
+    // Obtener datos de cotizador de localStorage
     const cotizadorData = JSON.parse(localStorage.getItem('cotizadorData'));
     const consumidor = document.getElementById('consumidor').value;
     const contacto = document.getElementById('contacto').value;
@@ -107,5 +108,3 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidebar").classList.remove("open");
 }
-
-

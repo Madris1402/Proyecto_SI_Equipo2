@@ -9,9 +9,8 @@
 <body>
     <div>
         <ul>
-        <li><a href="#" onclick="openNav()">&#9776;</a></li>
-        <a href="../../actors/admin.html"><img src="../../resources/MENU.png" alt="Menu" width="50px" style="padding: 5px"></a>
-        <p class="user">Administrador</p>
+        <a href="./principalInsumos.html"><img src="../../resources/MENU.png" alt="Menu" width="50px" style="padding: 5px"></a>
+        <p class="user">Insumos</p>
         </ul>
     </div>
     <div>
@@ -36,8 +35,7 @@
 
     <br>
     
-    <button onclick="window.location.href = 'principalNuevos.html';">Solicitar Insumo</button>
-    <a href="../../actors/admin.html"><button>Inicio</button></a>
+    <button onclick="window.location.href = './NuevosMenu.html';">Solicitar Insumo</button>
 
     <script>
         function actualizarEstatus() {
@@ -135,15 +133,6 @@
 
         // Llama a la función para agregar insumo al cargar la página
         agregarInsumoDesdeURL();
-    </script>
-    <script>
-        function openNav() {
-            document.getElementById("mySidebar").classList.add("open");
-        }
-      
-      function closeNav() {
-            document.getElementById("mySidebar").classList.remove("open");
-        }
     </script>
 </body>
 </html>
