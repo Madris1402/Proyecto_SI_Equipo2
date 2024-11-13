@@ -21,6 +21,7 @@ ul {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 li {
   float: left;
@@ -215,4 +216,9 @@ p{
 }
 .open {
   width: 180px;
+}
+.user{
+  margin: auto;
+  height: 50%;
+  margin-left: 0;
 }
