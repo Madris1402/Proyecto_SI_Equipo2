@@ -62,27 +62,18 @@
             <table class="tablero" id="horasExtras">
                 <thead>
                     <tr>
+                        <th>Cantidad</th>
                         <th>Técnica</th>
                         <th>Descripción</th>
-                        <th>Cantidad</th>
                         <th>Producción Aproximada</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <select name="tecnica" id="tecnica">
-                                <option value="">Selecciona técnica</option>
-                                <option value="">Bordado</option>
-                                <option value="">Serigrafía</option>
-                                <option value="">Transfer</option>
-                                <option value="">Vinyl</option>
-                                <option value="">Grabado</option>
-                            </select>
-                        </td>
-                        <td><input type="text" class="description"></td>
-                        <td><input type="number" class="horas"></td>
-                        <td><input type="number" class="producc">hrs</td>
+                        <td><p><span id="cantidad"></span></p></td>
+                        <td><p><span  id="tecnica"></span></p></td>
+                        <td margin="0"><p><textarea name="descripcion" id="descripcion"></textarea></p></td>
+                        <td><p><span id="producc"></span> hrs</p></td>
                     </tr>
                 </tbody>
             </table>
